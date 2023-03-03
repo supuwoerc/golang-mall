@@ -20,3 +20,4 @@ runtime
 go.sum
 sql
 logs
+/docker/data/
