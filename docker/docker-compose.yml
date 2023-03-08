@@ -4,7 +4,7 @@ services:
     container_name: "golang-mall-database-dev"
     image: mysql:latest
     environment:
-      MYSQL_DATABASE: "golang_mall"
+      MYSQL_DATABASE: "golang_mall" 
       MYSQL_USER: "golang_mall"
       MYSQL_PASSWORD: "password"
       MYSQL_ROOT_PASSWORD: "password"
@@ -12,7 +12,5 @@ services:
       - ./data:/var/lib/mysql
     ports:
       - "3306:3306"
-      - "33060:33060"
     expose:
       - "3306"
-      - "33060"
