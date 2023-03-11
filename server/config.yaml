@@ -1,0 +1,7 @@
+server:
+  host: 127.0.0.1:8080
+jwt:
+  secret: "jwt-mall-key"
+mysql:
+  dsn: "golang_mall:password@tcp(localhost:3306)/golang_mall?charset=utf8mb4&parseTime=True&loc=Local"
+  
