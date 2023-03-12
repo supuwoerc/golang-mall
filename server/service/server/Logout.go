@@ -2,9 +2,11 @@ package server
 
 import (
 	"github.com/gin-gonic/gin"
-	"net/http"
+	"server/component/config"
+	"server/service/h"
 )
 
 func Logout(c *gin.Context) {
-	c.String(http.StatusOK, "hello logout")
+	h.RemoveCookie(c, config.Config.GetString("server.clientTokenKey"))
+	h.OK(c, nil)
 }
