@@ -6,10 +6,10 @@ import (
 	helper_gen "github.com/langwan/langgo/helpers/gen"
 	"gorm.io/gorm"
 	"server/component/config"
-	"server/logic/logic/password"
-	"server/logic/logic/token"
 	"server/logic/orm/dal"
 	"server/logic/orm/model"
+	"server/logic/password"
+	"server/logic/token"
 	"server/service/h"
 	"time"
 )

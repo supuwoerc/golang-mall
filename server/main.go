@@ -7,6 +7,6 @@ import (
 
 func main() {
 	g := gin.New()
-	RouterRegister(g)
+	RouterRegister(g) //路由
 	_ = g.Run(":8080")
 }
