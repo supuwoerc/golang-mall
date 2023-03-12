@@ -11,7 +11,7 @@ func OK(c *gin.Context, body any) {
 	c.JSON(http.StatusOK, gin.H{
 		"code":    0,
 		"body":    body,
-		"message": "",
+		"message": "操作成功",
 	})
 }
 func Fail(c *gin.Context, err error) {
@@ -59,7 +59,7 @@ func Validator(c *gin.Context, err error) {
 		c.JSON(http.StatusUnprocessableEntity, gin.H{
 			"code":    -1,
 			"body":    err,
-			"message": "表单验证失败",
+			"message": err.Error(),
 		})
 	}
 }
