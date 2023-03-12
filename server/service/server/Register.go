@@ -1,7 +1,6 @@
 package server
 
 import (
-	"fmt"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	helper_gen "github.com/langwan/langgo/helpers/gen"
@@ -32,7 +31,6 @@ func Register(c *gin.Context) {
 	if err := c.ShouldBindJSON(&registerRequest); err != nil {
 		h.Validator(c, err)
 	} else {
-		fmt.Println(registerRequest)
 		_, err := dal.Account.Where(dal.Account.Phone.Eq(registerRequest.Phone)).First()
 		if err != gorm.ErrRecordNotFound {
 			if err != nil {
