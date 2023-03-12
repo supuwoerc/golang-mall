@@ -8,10 +8,11 @@ const TableNameAccount = "accounts"
 
 // Account mapped from table <accounts>
 type Account struct {
-	ID       string `gorm:"column:id;primaryKey" json:"id"`
-	Phone    string `gorm:"column:phone" json:"phone"`
-	Nickname string `gorm:"column:nickname" json:"nickname"`
-	Password string `gorm:"column:password" json:"password"`
+	ID       string `gorm:"column:id;primaryKey" json:"id"`           // ID
+	Phone    string `gorm:"column:phone;not null" json:"phone"`       // 电话
+	Nickname string `gorm:"column:nickname;not null" json:"nickname"` // 昵称
+	Password string `gorm:"column:password;not null" json:"password"` // 密码
+	Salt     string `gorm:"column:salt;not null" json:"salt"`         // 盐值
 }
 
 // TableName Account's table name

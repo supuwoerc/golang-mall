@@ -1,5 +1,6 @@
 server:
   host: 127.0.0.1:8080
+  clientTokenKey: "mall-token"
 jwt:
   secret: "jwt-mall-key"
 mysql:
