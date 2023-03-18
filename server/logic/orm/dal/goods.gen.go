@@ -45,14 +45,10 @@ func newGood(db *gorm.DB, opts ...gen.DOOption) good {
 type good struct {
 	goodDo
 
-	ALL  field.Asterisk
-	ID   field.String // ID
-	Name field.String // 商品名称
-	/*
-		商品图片
-
-	*/
-	Img           field.String
+	ALL           field.Asterisk
+	ID            field.String // ID
+	Name          field.String // 商品名称
+	Img           field.String // 商品图片
 	Price         field.Field  // 现价
 	OriginalPrice field.Field  // 原价
 	Desc          field.String // 描述

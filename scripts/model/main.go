@@ -26,6 +26,7 @@ func main() {
 	g.ApplyBasic(
 		g.GenerateModel("accounts"),
 		g.GenerateModel("blocks"),
+		//指定价格字段类型为decimal
 		g.GenerateModel("goods", gen.FieldType("price", "decimal.Decimal"), gen.FieldType("original_price", "decimal.Decimal")),
 	)
 	g.Execute()

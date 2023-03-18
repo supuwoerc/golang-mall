@@ -7,6 +7,7 @@ package model
 import (
 	"time"
 
+	"github.com/shopspring/decimal"
 	"gorm.io/gorm"
 )
 
@@ -14,13 +15,9 @@ const TableNameGood = "goods"
 
 // Good mapped from table <goods>
 type Good struct {
-	ID   string `gorm:"column:id;primaryKey" json:"id"`   // ID
-	Name string `gorm:"column:name;not null" json:"name"` // 商品名称
-	/*
-		商品图片
-
-	*/
-	Img           string          `gorm:"column:img;not null" json:"img"`
+	ID            string          `gorm:"column:id;primaryKey" json:"id"`                       // ID
+	Name          string          `gorm:"column:name;not null" json:"name"`                     // 商品名称
+	Img           string          `gorm:"column:img;not null" json:"img"`                       // 商品图片
 	Price         decimal.Decimal `gorm:"column:price;not null" json:"price"`                   // 现价
 	OriginalPrice decimal.Decimal `gorm:"column:original_price;not null" json:"original_price"` // 原价
 	Desc          string          `gorm:"column:desc;not null" json:"desc"`                     // 描述
