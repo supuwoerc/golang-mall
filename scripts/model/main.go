@@ -23,6 +23,10 @@ func main() {
 	})
 	// 设置目标 db
 	g.UseDB(db)
-	g.ApplyBasic(g.GenerateAllTable()...)
+	g.ApplyBasic(
+		g.GenerateModel("accounts"),
+		g.GenerateModel("blocks"),
+		g.GenerateModel("goods", gen.FieldType("price", "decimal.Decimal"), gen.FieldType("original_price", "decimal.Decimal")),
+	)
 	g.Execute()
 }
