@@ -14,4 +14,5 @@ func init() {
 		panic(fmt.Errorf("创建数据库失败：%w", err))
 	}
 	dal.SetDefault(db)
+	fmt.Println("mysql初始化成功")
 }
